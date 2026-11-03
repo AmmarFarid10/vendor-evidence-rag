@@ -1,0 +1,89 @@
+{
+  "documents": [
+    {
+      "source": "acme-quote",
+      "title": "Acme industrial switches \u2014 quote Q-101",
+      "entity": "acme",
+      "text": "Acme quotation Q-101. Unit price USD: 120. Delivery days: 10. Warranty months: 24. Capacity units: 500. Prices exclude tax and freight. Quote valid for the standard switch only."
+    },
+    {
+      "source": "beacon-quote",
+      "title": "Beacon industrial switches \u2014 quote Q-202",
+      "entity": "beacon",
+      "text": "Beacon quotation Q-202. Unit price USD: 105. Delivery days: 28. Warranty months: 12. Capacity units: 1000. Expedited shipping is not included and requires a new quotation."
+    },
+    {
+      "source": "cedar-quote",
+      "title": "Cedar industrial switches \u2014 quote Q-303",
+      "entity": "cedar",
+      "text": "Cedar quotation Q-303. Delivery days: 7. Warranty months: 36. Capacity units: 200. Unit pricing is available on request and must not be estimated from other suppliers."
+    },
+    {
+      "source": "acme-profile",
+      "title": "Acme company profile",
+      "entity": "acme",
+      "text": "Acme company profile. Offices are open on weekdays. This corporate overview is about office locations and recruitment; purchasing terms are stated separately in the formal quotation."
+    },
+    {
+      "source": "beacon-profile",
+      "title": "Beacon company profile",
+      "entity": "beacon",
+      "text": "Beacon company profile. Offices are open on weekdays. This corporate overview is about office locations and recruitment; purchasing terms are stated separately in the formal quotation."
+    },
+    {
+      "source": "cedar-profile",
+      "title": "Cedar company profile",
+      "entity": "cedar",
+      "text": "Cedar company profile. Offices are open on weekdays. This corporate overview is about office locations and recruitment; purchasing terms are stated separately in the formal quotation."
+    }
+  ],
+  "comparison": {
+    "suppliers": [
+      "acme",
+      "beacon",
+      "cedar"
+    ],
+    "requirements": [
+      {
+        "attribute": "delivery_days",
+        "operator": "le",
+        "value": 14
+      },
+      {
+        "attribute": "warranty_months",
+        "operator": "ge",
+        "value": 24
+      },
+      {
+        "attribute": "unit_price_usd",
+        "operator": "le",
+        "value": 130
+      }
+    ]
+  },
+  "expected_qualified": [
+    "acme"
+  ],
+  "retrieval_cases": [
+    {
+      "question": "How soon can the switches arrive?",
+      "entity": "acme",
+      "source": "acme-quote"
+    },
+    {
+      "question": "What does one switch cost?",
+      "entity": "beacon",
+      "source": "beacon-quote"
+    },
+    {
+      "question": "How long is the guarantee?",
+      "entity": "cedar",
+      "source": "cedar-quote"
+    },
+    {
+      "question": "What is the estimated unit pricing?",
+      "entity": "cedar",
+      "source": "cedar-quote"
+    }
+  ]
+}

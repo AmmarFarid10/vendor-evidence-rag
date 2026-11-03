@@ -1,0 +1,34 @@
+{
+  "scenario": "Industrial switch RFQ",
+  "qualified_suppliers": [
+    "acme"
+  ],
+  "suppliers": [
+    {
+      "supplier": "acme",
+      "checks": [
+        "met",
+        "met",
+        "met"
+      ]
+    },
+    {
+      "supplier": "beacon",
+      "checks": [
+        "not_met",
+        "not_met",
+        "met"
+      ]
+    },
+    {
+      "supplier": "cedar",
+      "checks": [
+        "met",
+        "met",
+        "unknown"
+      ]
+    }
+  ],
+  "embedding_model": "lexical-hash-512-v2",
+  "external_llm_called": false
+}
